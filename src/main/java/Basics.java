@@ -43,6 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello world!");
 
 
 
@@ -62,7 +63,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+    int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -94,16 +95,19 @@ public class Basics {
          *
          * e.g. the end result should look like:
          * Current count: 10
-         * Current count: 9
+         * Current count: 9*
          *     ...
          * Current count: 1
          * Current count: 0
          */
-
+        for (int i = 10; i >= 0; i--){
+            System.out.println("Current count: " + i);
+        }
 
     }
 
-    /**
+
+     /**
      *  6. Below is a method named split which returns a String,
      *    as indicated by the 'String' part of the header. It takes one
      *    parameter named to_split, whose type is also a String.
@@ -142,10 +146,16 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder();
 
-        // Fill in the rest of the body here
+        String str = "Idol Long Oolong Vertical Europe University Toyota";
+        String[] split_ed = str.split(" ");
 
+        for (String first_char: split_ed) {
+            System.out.println(first_char.charAt(0));
+            ret.append(first_char.charAt(0));
+        }
         return ret.toString();
     }
+
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
